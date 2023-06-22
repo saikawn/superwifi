@@ -70,11 +70,13 @@ body {
 }
 .product-card {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 100%;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .product-card:hover img {
@@ -128,4 +130,22 @@ body {
 
 .primary-btn:hover {
     background: linear-gradient(to right, #583fbb, rgb(104, 96, 218));
+}
+
+.only-large-screen {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .product-card {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .hero h1 {
+        font-size: 6rem;
+    }
+
+    .only-large-screen {
+        display: inline;
+    }
 }

@@ -15,7 +15,6 @@ products.forEach(product => {
     const img = clone.querySelector("img")
     img.src = product.photo
     
-
     wrapper.appendChild(clone)
 })
 
